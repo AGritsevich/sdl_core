@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015, Ford Motor Company
+ * Copyright (c) 2016, Ford Motor Company
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -134,6 +134,9 @@ class ApplicationManager {
 
   virtual ApplicationSharedPtr application_by_policy_id(
       const std::string& policy_app_id) const = 0;
+
+  virtual ApplicationSharedPtr GetAppToRegisteredAppByHmiId(
+      uint32_t app_id) const = 0;
 
   virtual std::vector<ApplicationSharedPtr> applications_by_button(
       uint32_t button) = 0;
